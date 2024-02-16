@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/fontawesome/css/all.min.css">
+    <title>Нарушениям-нет</title>
+</head>
+<body>
+    <!-- HEADER START -->
+    <header class="header">
+        <div class="header_overlay">
+            <div class="container">
+                <nav class="header_nav">
+                    <div class="header_logo">
+                        <a href="index.html"><img class="header_logo-img" src="img/logo.png" alt="logo"></a>
+                    </div>
+                    <div class="header_list-authorization">
+                        <ul class="header_nav-list nav__list--header">
+                            <li><a href="#statement" class="header_nav-link">Заявление</a></li>
+                             <li><a href="statement.php" class="header_nav-link">Посмотреть заявление</a></li>
+                            <li><a href="index.html" class="header_nav-link active">Выход</a></li>
+                        </ul>
+
+                        <button type="button" class="nav__toggle">
+							<i class="fa-solid fa-bars menu-icon"></i>
+						</button>
+                    </div>
+                </nav>
+                <div class="header-content">
+                    <h1 class="header_content-title">Нарушениям.Нет</h1>
+                    <button class="header_content-btn"><a href="#main">перейти</a></button>
+                </div>
+            </div>
+        </div>
+    </header>
+     <!-- HEADER END -->
+
+     <!-- MAIN START -->
+     <main class="main" id="main">
+        <!-- STATEMENT START -->
+       <section class="statement" id="statement">
+            <div class="container">
+                <h1 class="section_title">Заявление</h1>
+                <div class="statement-content">
+                    <form action="formulate_statement.php" method="post" class="statement-form">
+                        <input class="form-input" name="car_number" type="text" placeholder="Государственный номер автомобиля" id="car_number" required>
+                        <textarea class="form-textarea" rows="5"  name="description" placeholder="Описание нарушения" id="description" required></textarea>
+                        <input class="btn-form" type="submit"  name="statement" value="Отправить">
+                    </form>
+                </div>
+            </div>
+       </section>
+        <!-- STATEMENT END -->
+
+        <!-- STATUS START -->
+        <section class="status" id="status">
+            <div class="container">
+                <h1 class="section_title">Статус заявления</h1>
+                    <div class="status_content">
+                        <div class="status_content-confirmation">
+                            <h2>Статус</h2>
+                            <img class="status-img" src="img/status-img.png" alt="">
+                        </div>
+                        <div class="status_content-report">
+                            <h3 class="report-title">Государственный регистрационный номер автомобиля:</h3>
+                            <p class="number-car"><strong>А402АА 78RUS</strong></p>
+                            <h3 class="report-title">Описание нарушения</h3>
+                            <p class="status_report-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <!-- STATUS END -->
+     </main>
+     <!-- MAIN END -->
+
+      <!-- FOOTER START -->
+      <footer class="footer">
+            <div class="col">
+                <img src="img/logo.png" alt="footer-logo" class="footer-logo">
+            </div>
+            <div class="col">
+                <h2 class="footer-title">Нарушениям.Нет</h2>
+                <h3 class="footer-year">2023</h3>
+            </div>
+            <div class="col">
+                <p class="footer_number"><strong>+7 495 771 05 08</strong></p>
+                <p><a class="footer-email" href="example@mail.ru">example@mail.ru</a></p>
+            </div>
+      </footer>
+      <!-- FOOTER END -->
+
+      <!-- ВХОД/РЕГИСТРАЦИЯ START -->
+      <div id="boxes">
+
+        <div id="dialog1"  class="window">
+            <div class="autorization__modal-content">
+                <h1 class="autorization__modal-title">Вход</h1>
+                <button  type="button">
+                    <a href="#" class="close"><i  class="fa-solid fa-xmark autorization__modal-close "></i></a>
+                </button>
+                <a href="#dialog2" name="modal" class="autorization__modal-transition">Регистрация <i class="fa-solid fa-chevron-right"></i></a>
+                <form class="autorization__modal-form" action="">
+                    <input class="form-input modal-adaptive" type="text" placeholder="Логин">
+                    <input class="form-input modal-adaptive" type="text" placeholder="Пароль">
+                    <input class="form-input modal-adaptive" type="text" placeholder="ФИО">
+                    <input class="form-input modal-adaptive" type="text" placeholder="Телефон">
+                    <input class="form-input modal-adaptive" type="text" placeholder="E-mail">
+                    <input class="btn-form modal-adaptive" type="submit" value="Вход">
+                </form>
+            </div>
+          </div>
+
+        <div id="dialog2" class="window">
+            <div class="registration__modal-content">
+                <h1 class="registration__modal-title">Регистрация</h1>
+                <a href="#" class="close"><i class="fa-solid fa-xmark registration__modal-close"></i></a>
+                <a href="#dialog1" name="modal" class="registration__modal-transition"><i class="fa-solid fa-chevron-left"></i> Вход</a>
+                <form class="registration__modal-form" action="">
+                    <input class="form-input" type="text" placeholder="Логин">
+                    <input class="form-input" type="text" placeholder="Пароль">
+                    <input class="form-input" type="text" placeholder="ФИО">
+                    <input class="form-input" type="text" placeholder="Телефон">
+                    <input class="form-input" type="text" placeholder="E-mail">
+                    <input class="btn-form" type="submit" value="Регистрация">
+                </form>
+            </div>
+          </div>
+    
+
+          <div id="mask"></div>
+      </div>
+      <!--==================== SCROLL TOP ====================-->
+      <a href="#" class="scrollup" id="scroll-up">
+        <i class="fa-solid fa-chevron-up scrollup__icon"></i>
+        </a>
+        
+		<script src="js/jquery-3.7.1.min.js"></script>
+       <script>
+        $(document).ready(function() {
+                //select all the a tag with name equal to modal
+                $('a[name=modal]').click(function(e) {
+                        //Cancel the link behavior
+                        e.preventDefault();
+                        $('#mask, .window').hide();
+                        $("body").addClass("fixed");
+                        //Get the A tag
+                        var id = $(this).attr('href');
+                        //Get the screen height and width
+                        var maskHeight = $(document).height();
+                        var maskWidth = $(window).width();
+                        //Set heigth and width to mask to fill up the whole screen
+                        $('#mask').css({'width':maskWidth,'height':maskHeight});
+                        //transition effect
+                        $('#mask').fadeIn(1);
+                        $('#mask').fadeTo('1',0.8);
+                        //Get the window height and width
+                        var winH = $(window).height();
+                        var winW = $(window).width();
+                        //Set the popup window to center
+                        $(id).css('top',  winH/2-$(id).height()/2);
+                        $(id).css('left', winW/2-$(id).width()/2);
+                        //transition effect
+                        $(id).fadeIn(1);
+                });
+                //if close button is clicked
+                $('.window .close').click(function (e) {
+                        //Cancel the link behavior
+                        e.preventDefault();
+                        $('#mask, .window').hide();
+                        $("body").removeClass("fixed");
+                });
+
+                
+                
+                
+                //if mask is clicked
+                $('#mask').click(function () {
+                        $(this).hide();
+                        $('.window').hide();
+                });
+        });
+        </script>
+      <script src="js/swiper-bundle.min.js"></script>
+      <script src="js/main.js"></script>
+</body>
+</html>
